@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MelodyBox</title>
+  <link rel="preconnect" href="https://fonts.gstati`c.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="side-bar" id="sidebar">
+      <div class="logo-text" id="logotext">
+        <a href="">
+          <img src="./images/logo3.png" alt="">
+        </a>
+      </div>
+      <div class="logo-image" id="logoimage">
+        <a href="">
+          <img src="./images/logo.png" alt="">
+        </a>
+      </div>
+      <ul class="menu">
+        <li class="menu-item active" id="home">
+          <i class="fas fa-home"></i>
+          <span class="menu-item-text">Home</span>
+        </li>
+        <li class="menu-item" id="chart">
+          <i class="fas fa-chart-line"></i>
+          <span class="menu-item-text">Favorite Songs</span>
+        </li>
+        <li class="menu-item" id="video">
+          <i class="fas fa-film"></i>
+          <span class="menu-item-text">Music video</span>
+        </li>
+        <li class="menu-item" id="singer">
+          <i class="far fa-list-alt"></i>
+          <span class="menu-item-text">Singer</span>
+        </li>
+      </ul>
+      <div class="social-list" id="social">
+        <a href="" class="social-item">
+          <i class="fab fa-spotify"></i>
+        </a>
+        <a href="" class="social-item">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="social-item">
+          <i class="fab fa-youtube"></i>
+        </a>
+        <a href="" class="social-item">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="social-item">
+          <i class="fab fa-google"></i>
+        </a>
+      </div>
+      <div class="side-bar-more-extend" id="more-extend">
+        <div class="side-bar-more-item">
+          <i class="fas fa-chevron-right"></i>
+        </div>
+      </div>
+      <div class="side-bar-more-narrow" id="more-narrow">
+        <div class="side-bar-more-item">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+      </div>
+    </div>
+    <main id="main">
+      <div class="header">
+        <form action="" class="search">
+          <button class="search-icon">
+            <svg width="20" height="20" viewBox="0 0 29 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M20.7163 18.0733C22.0935 16.1917 22.9172 13.8805 22.9172 11.375C22.9172 5.10306 17.8168 0 11.5482 0C5.27951 0 0.179199 5.10306 0.179199 11.375C0.179199 17.647 5.27956 22.7501 11.5482 22.7501C14.0524 22.7501 16.3626 21.9258 18.2432 20.548L25.6913 28L28.1646 25.5254C28.1646 25.5253 20.7163 18.0733 20.7163 18.0733ZM11.5482 19.25C7.20797 19.25 3.67738 15.7176 3.67738 11.375C3.67738 7.03249 7.20797 3.50003 11.5482 3.50003C15.8885 3.50003 19.4191 7.03249 19.4191 11.375C19.4191 15.7176 15.8884 19.25 11.5482 19.25Z"
+                fill="#E8E8E8" />
+            </svg>
+          </button>
+          <div class="search-input">
+            <input class="search-input-item" id="myInput" type="text" placeholder="Songs, Artists, Albums,..." value="">
+          </div>
+        </form>
+        <div class="tool">
+          <a href="#" class="upgrade" id="login">Login</a>
+          <a href="#" class="upgrade" id="sign-up">Sign up</a>
+        </div>
+      </div>
+      <div class="content">
+        <div class="box-home" id="boxhome">
+          <div class="box-slideshow">
+            <div class="swiper-container mySwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./images//slide1.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/slide2.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/slide3.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/slide4.jpg" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/slide5.jpg" />
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+          <div class="box-player">
+            <div class="content-item">
+              <div class="block-box">
+                <h2 class="heading">Most popular</h2>
+
+              </div>
+              <song-list id="my-list"></song-list>
+
+            </div>
+            <div class="content-item">
+              <div class="block-box">
+                <h2 class="heading">Now playing</h2>
+
+              </div>
+
+              <player-tool></player-tool>
+
+            </div>
+          </div>
+        </div>
+        <div class="box-chart" id="boxchart">
+          <div class="content-item">
+            <div class="block-box">
+              <h2 class="heading">Top chart</h2>
+              <i class="fas fa-play"></i>
+            </div>
+            <ul id="fav-songs" class="song-list">
+
+            </ul>
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- <div class="login-form" id="loginform"> -->
+    <!-- <h2>Modal Signup Form</h2> -->
+
+    <!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button> -->
+
+    <div id="id01" class="modal1">
+
+      <form class="modal-content animate " id="form1" action="/action_page.php">
+        <div class="imgcontainer">
+          <h1>Sign up</h1>
+          <p>Please fill in this form to create an account.</p>
+          <span onclick="document.getElementById('id01').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+        </div>
+        <div class="container">
+
+          <hr>
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <label for="psw-repeat"><b>Repeat Password</b></label>
+          <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+
+          <div class="clearfix">
+            <button type="submit" class="signupbtn">Sign Up</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div id="id02" class="modal2">
+
+      <form class="modal-content animate" action="/action_page.php" method="post">
+
+        <div class="imgcontainer">
+          <h1>Login</h1>
+          <span onclick="document.getElementById('id02').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+        </div>
+
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <button type="submit">Login</button>
+        </div>
+
+      </form>
+    </div>
+
+    <!-- </div> -->
+
+  </div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="./js/main.js" type="module"></script>
+</body>
+
+</html>
