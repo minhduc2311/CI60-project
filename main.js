@@ -1,7 +1,7 @@
-import SongContainer from "./components/SongContainer.js";
-import SongList from "./components/SongList.js";
-import PlayerTool from "./components/Player.js";
-import {songs} from "./data.js"
+import SongContainer from "./js/components/SongContainer.js";
+import SongList from "./js/components/SongList.js";
+import PlayerTool from "./js/components/Player.js";
+import {songs} from "./js/data.js"
 
 
 
