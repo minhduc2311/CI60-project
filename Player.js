@@ -1,4 +1,4 @@
-import { songs } from "../data.js";
+import { songs } from "./js/data.js";
 
 const $template = document.createElement("template");
 $template.innerHTML = `
